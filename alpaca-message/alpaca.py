@@ -1,10 +1,35 @@
 import click
 
 
-# TODO: Move to template strings
 def generate_string(inputString):
-    if len(inputString) > 50:
-        pass
+    inputLength = len(inputString)
+
+    if inputLength > 25:
+        splitStr = inputString.split(" ")
+        lineOne = splitStr[:inputLength]
+        lineTwo = splitStr[inputLength:]
+
+        output = r"""   ' ' ' ' '
+ /\,/"`"`"\`\ /\,
+ | `         ` |
+ `  ⌒       ⌒  `
+ (  ◉  ❤︎   ◉   )
+ (      ⌣       ) ----- %s
+ (             )        %s
+  (           )
+  (           )
+  (           )
+ (             )"`"``"`(``)
+ (                        )
+(                         )
+(                         )
+(                        )
+ (     )`(     )((      )
+  \, ,/   \, ,/   \  \ /
+    ⌣      ⌣      ⌣ ⌣""" % (
+            " ".join(lineOne),
+            " ".join(lineTwo),
+        )
     else:
         output = (
             r"""   ' ' ' ' '
@@ -12,9 +37,7 @@ def generate_string(inputString):
  | `         ` |
  `  ⌒       ⌒  `
  (  ◉  ❤︎   ◉   )
- (      ⌣       ) ----- """
-            + inputString
-            + r"""
+ (      ⌣       ) ----- %s
  (             )
   (           )
   (           )
@@ -27,6 +50,7 @@ def generate_string(inputString):
  (     )`(     )((      )
   \, ,/   \, ,/   \  \ /
     ⌣      ⌣      ⌣ ⌣"""
+            % inputString
         )
     return output
 
@@ -36,9 +60,9 @@ def print_message(inputString):
 
 
 def main():
-    print_message("Test")
+    print_message("Test String")
+    print_message("This is one example of a extremely long string")
 
 
 if __name__ == "__main__":
-    # main()
-    print(generate_string("Test"))
+    main()
