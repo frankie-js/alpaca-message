@@ -36,3 +36,32 @@ def test_one_line():
         )
         == 100
     )
+
+
+def test_two_line():
+    assert (
+        fuzz.ratio(
+            alpaca.generate_string("This is a extremely long test message"),
+            r"""
+   ' ' ' ' '
+ /\,/"`"`"\`\ /\,
+ | `         ` |
+ `  ⌒       ⌒  `
+ (  ◉  ❤︎   ◉   )
+ (      ⌣       ) ----- This is a
+ (             )        extremely long test message
+  (           )
+  (           )
+  (           )
+ (             )"`"``"`(``)
+ (                        )
+(                         )
+(                         )
+(                        )
+ (     )`(     )((      )
+  \, ,/   \, ,/   \  \ /
+    ⌣      ⌣      ⌣ ⌣
+""",
+        )
+        == 100
+    )

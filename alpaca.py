@@ -11,7 +11,6 @@ def generate_string(inputString):
 
     if inputLength > 25:
         splitStr = inputString.split(" ")
-        print(splitStr)
         lineOne, lineTwo = split_list(splitStr)
 
         output = r"""   ' ' ' ' '
