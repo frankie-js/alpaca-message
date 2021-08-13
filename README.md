@@ -1,10 +1,27 @@
 # alpaca-message
 
-A CLI app for
+A CLI tool for displaying messages with added alpacas!
 
 ## Usage
 
 ```sh
-$ alpaca-message "Message"
-message output
+$ alpaca-message "Alpacas are the best!"
+   ' ' ' ' '
+ /\,/"`"`"\`\ /\,
+ | `         ` |
+ `  ⌒       ⌒  `
+ (  ◉  ❤︎   ◉   )
+ (      ⌣       ) ----- Alpacas are the best!
+ (             )
+  (           )
+  (           )
+  (           )
+ (             )"`"``"`(``)
+ (                        )
+(                         )
+(                         )
+(                        )
+ (     )`(     )((      )
+  \, ,/   \, ,/   \  \ /
+    ⌣      ⌣      ⌣ ⌣
 ```
